@@ -1,0 +1,203 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>AES Encryption/Decryption</title>
+    <link rel="icon" href="https://www.pngmart.com/files/16/Vector-Key-PNG-Photos.png" type="">   <!-- Ini adalah tag yang menghubungkan ikon halaman (favicon) yang ditampilkan di tab browser.-->
+    <!-- Jika form kosong agar tidak bisa di submit -->
+    <script>
+        function validateForm() {
+            var textInput = document.getElementById("text");
+            var keyInput = document.getElementById("key");
+            if (textInput.value.trim() === "") {
+                alert("Text field cannot be empty.");
+                return false;
+            }
+               
+            if (keyInput.value.trim() === "") {
+                alert("Encryption/Decryption key cannot be empty.");
+                return false;
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(https://wallpapercave.com/wp/wp2763891.gif); 
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Menyusun elemen secara vertikal */
+            align-items: center;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            background-image: ur;
+            border-radius: 50px;
+            box-shadow: 0 0 65px rgb(0, 0, 0);
+            padding: 20px;
+            width: 500px;
+            max-width: 1000%;
+            margin-top: 2.5cm;
+            
+        }
+        
+        h1 {
+            text-align: left;
+            color: #09f7df;
+            margin-top: 2cm;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+            text-shadow: 4px 2px 7px rgb(0, 0, 0);
+            font-size: 30px;
+        }
+        
+        label {
+            align-items: center;
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 3px;
+            font-size: 15px;
+            color:#fcfcfc;
+            text-shadow: 3px 2px 5px rgb(0, 0, 0);
+            font-size: 17px;
+        }
+        
+         textarea, input[type="text"], input[type="submit"] {
+            display: block;
+            width: 90%;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 2px solid #ffffff;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+          
+            
+        }
+        
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            padding: 10px;
+            background: url('arrow.png') no-repeat right center / 20px #fff;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: slategray;
+            width: 95%;
+            border-radius: 5px;
+            border: 2px solid #ffffff;
+            color: #08d2e5;
+        }
+        
+        textarea {
+            resize: vertical;
+            background-color: rgba(255, 255, 255, 0.1);
+             width: 89%;
+             color: #08d2e5;
+             font-family: Arial, sans-serif;
+        }
+        
+        input[type="submit"] {
+            background-color: #08d2e5;
+            color: #fff;
+            border: #085f67;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            width: 35%;
+            margin-top: 29px;
+            margin-left: 150px;
+        
+            
+        }
+        
+            input[type="submit"]:hover {
+                background-color: #00d9ed;
+                color:silver;
+                
+        
+            }
+    
+         textarea:hover{
+            color: #00dff3;
+
+        }
+            input:hover{
+            color: #0f2729;
+
+        }
+
+    
+
+        input[placeholder="Enter your key"]{
+            color: #0fc9da;
+        }
+
+        
+        input[placeholder]:hover{
+            color: #00dff3; 
+
+        }
+        footer{
+            position:absolute;
+            bottom:0;
+            width:30%;
+            height:15px; 
+            color: whitesmoke;
+            text-align: center;
+            font-size: xx-small;
+            font-stretch: expanded;
+            font-style: italic;
+
+        }
+
+        img{
+            width: 30px;
+            height: 30px;
+            position:absolute;
+            bottom:0;
+            top: 962px;
+            margin-right: 161px;
+            margin-top: px;
+        }
+
+        input::placeholder{
+            color: #08d2e5;
+        }
+        
+        textarea::placeholder{
+            color: #08d2e5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>AES Encryption/Decryption</h2>
+        
+        <form action="procces.php" method="post" onsubmit="return validateForm()">
+            <label for="text">Text to Encrypt/Decrypt:</label>
+            <textarea id="text" name="text" rows="4" cols="50" placeholder="Enter your text"></textarea>
+            
+            <label for="key">Encryption/Decryption Key:</label>
+            <input type="text" id="key" name="password" placeholder="Enter your key">
+            
+            <label for="action">Select Action:</label>
+            <select id="action" name="action">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+    
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <footer>Rangga Pasha Cucu Wibisono</footer>
+    <img src="naga rgb.gif" alt="">
+</body>
+</html>
