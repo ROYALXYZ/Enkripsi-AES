@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url(https://wallpapercave.com/wp/wp2763891.gif);
+            background-image: url('gifsokkeren.gif');
             background-size: cover;
             margin: 0;
             padding: 0;
@@ -92,16 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             p:hover{
                 color:white;
             }
-         
-            img{
-            width: 30px;
-            height: 30px;
-            position:absolute;
-            bottom:0;
-            top: 962px;
-            margin-right: 161px;
-            margin-top: px;
-        }
+        
             
         footer{
             position:absolute;
@@ -109,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             width:50%;
             height:15px; 
             color: whitesmoke;
-            text-align: center;
+            text-align: center; 
             font-size: xx-small;
             font-stretch: expanded;
             font-style: italic;
@@ -126,7 +117,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <h2>Result</h2>
         <footer>Rangga Pasha Cucu Wibisono</footer>
-        <img src="naga rgb.gif" alt="">
         <p><?php echo isset($result) ? $result : "SALAHHH"; ?></p>
         <p><a href="index.html"></p>
         <input type="submit" value="Kembali"> 
